@@ -10,11 +10,13 @@
 		const element = button.getAttribute('data-element')
 
 		if(element == 'square') {
-			createSquare();
+			createItem({
+				image: '/img/square.png'
+			});
 		}
 	}
 
-	const createSquare = () => {
+	const createItem = (item) => {
 		const houseCreatorRect = houseCreator.getBoundingClientRect()
 		const newItem = document.createElement("div")
 		newItem.classList.add('house-item');
@@ -26,7 +28,7 @@
 		
 		const image = document.createElement('img')
 		image.setAttribute('alt', 'item')
-		image.setAttribute('src', '/img/square.png')
+		image.setAttribute('src', item.image)
 		innerItem.appendChild(image)
 		
 		const remove = document.createElement('div')
@@ -35,12 +37,6 @@
 		remove.innerHTML = '<i class="fas fa-trash"></i>'
 		remove.addEventListener('click', removeItem)
 		innerItem.appendChild(remove)
-
-		const drag = document.createElement('div')
-		drag.classList.add('house-item-drag')
-		drag.setAttribute('key', key)
-		drag.innerHTML = '<i class="fas fa-hand-rock"></i>'
-		innerItem.appendChild(drag)
 		
 		newItem.appendChild(innerItem)
 		houseCreator.appendChild(newItem)

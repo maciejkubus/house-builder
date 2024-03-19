@@ -112,35 +112,17 @@
 .house-item {
 	position: absolute;
 	user-select: none;
+	cursor: move;
 }
 
 .house-item-inner {
 	position: relative;
 }
 
-.house-item-drag {
-	position: absolute;
-	z-index: 99;
-	top: -8px;
-	left: calc(100% - 8px);
-	background-color: white;
-	width: 32px;
-	height: 32px;
-	/* display: flex; */
-	display: none;
-	justify-content: center;
-	align-items: center;
-	border: 2px solid #222;
-	border-radius: 100%; 
-	cursor: move;
-	transition: .4s all ease-in-out;
-	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
-}
-
 .house-item-remove {
 	position: absolute;
 	z-index: 99;
-	top: 32px;
+	top: -8px;
 	left: calc(100% - 8px);
 	background-color: white;
 	width: 32px;
@@ -160,7 +142,6 @@
 	z-index: 99;
 }
 
-.house-item:hover .house-item-drag,
 .house-item:hover .house-item-remove {
 	display: flex;
 }

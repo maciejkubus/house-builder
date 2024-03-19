@@ -28,13 +28,16 @@
 			<div class="house-elements">
 				<div class="house-element house-element-1 house-element--active" data-step="1">
 					<div class="house-element-title">Kształt</div>
+					<!--  -->
+					<!--  -->
+				</div>
+				<div class="house-element house-element-2" data-step="2">
+					<div class="house-element-title">Okna, drzwi, ściany</div>
+					<!--  -->
 					<div class="house-element-btn" data-element="square">
 						<img src="/img/square.png" alt="square" class="house-element-btn-img">
 						<div class="house-element-btn-text">Kwadrat</div>
 					</div>
-				</div>
-				<div class="house-element house-element-2" data-step="2">
-					<div class="house-element-title">Okna, drzwi, ściany</div>
 					<!--  -->
 				</div>
 			</div>
