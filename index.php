@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="builder.css">
 	</head>
 	<body>
+		<h1 class="site-title">Kreator domku</h1>
 		<div class="house">
 			<nav class="house-nav">
 				<div class="house-nav-title">Krok</div>

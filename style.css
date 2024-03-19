@@ -12,3 +12,7 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
+.site-title {
+	margin: 0 0 16px 0;
+}
