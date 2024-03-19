@@ -9,12 +9,14 @@
 	</head>
 	<body>
 		<div id="house-builder">
-			<canvas id="house-builder-canvas">
+			<div class="house-builder-tools">
+				<button id="house-builder-square">Square</button>
+				<button id="house-builder-wall">Wall</button>
+			</div>
+			<canvas id="house-builder-canvas" width="1024" height="768">
 
 			</canvas>
 		</div>
-
-		
 		<script src="builder.js"></script>
 	</body>
 </html>

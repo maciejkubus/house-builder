@@ -6,3 +6,17 @@
 	height: 768px;
 	background-color: white;
 }
+
+#house-builder-canvas[tool=none] {
+	cursor: normal;
+}
+
+#house-builder-canvas[tool=wall],
+#house-builder-canvas[tool=start-square],
+#house-builder-canvas[tool=finish-square] {
+	cursor: crosshair;
+}
+
+.house-builder-tools {
+	padding-bottom: 16px;
+}
