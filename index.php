@@ -16,6 +16,7 @@
 	<body>
 		<div class="house">
 			<nav class="house-nav">
+				<div class="house-nav-title">Krok</div>
 				<ul class="house-nav-list">
 					<li class="house-nav-step house-nav-step--active" data-step="1">1</li>
 					<li class="house-nav-step" data-step="2">2</li>

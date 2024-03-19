@@ -8,8 +8,13 @@
 
 .house-nav {
 	background-color: white;
-	padding: 24px 8px;
+	padding: 16px 8px;
 	box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.house-nav-title {
+	font-weight: bold;
+	margin-bottom: 16px;
 }
 
 .house-nav-list {
