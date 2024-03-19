@@ -119,6 +119,7 @@
 
 .house-item-drag {
 	position: absolute;
+	z-index: 99;
 	top: -8px;
 	left: calc(100% - 8px);
 	background-color: white;
@@ -137,6 +138,7 @@
 
 .house-item-remove {
 	position: absolute;
+	z-index: 99;
 	top: 32px;
 	left: calc(100% - 8px);
 	background-color: white;
@@ -151,6 +153,10 @@
 	cursor: pointer;
 	transition: .4s all ease-in-out;
 	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+.house-item:hover {
+	z-index: 99;
 }
 
 .house-item:hover .house-item-drag,
