@@ -22,7 +22,16 @@
 					<li class="house-nav-step" data-step="2">2</li>
 				</ul>
 			</nav>
+			<div class="house-elements">
+				<div class="house-element house-element-1 house-element--active" data-step="1">
+					<div class="house-element-title"> Kształt </div>
+				</div>
+				<div class="house-element house-element-2" data-step="2">
+					<div class="house-element-title"> Okna, drzwi, ściany </div>
+				</div>
+			</div>
 		</div>
+		<script src="steps.js"></script>
 		<script src="builder.js"></script>
 	</body>
 </html>

@@ -4,12 +4,16 @@
 	min-height: 90vh;
 	border: 4px solid #222;
 	display: flex;
+	position: relative;
+	z-index: 1;
 }
 
 .house-nav {
 	background-color: white;
 	padding: 16px 8px;
 	box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.5);
+	position: relative;
+	z-index: 3;
 }
 
 .house-nav-title {
@@ -45,4 +49,28 @@
 
 .house-nav-step:hover {
 	background-color: #ddd;
+}
+
+.house-elements {
+	width: 20%;
+	background-color: white;
+	padding: 16px;
+	box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.5);
+	position: relative;
+	z-index: 2;
+}
+
+.house-element {
+	width: 100%;
+	display: none;
+}
+
+.house-element--active {
+	display: block;
+}
+
+.house-element-title {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 16px;
 }
