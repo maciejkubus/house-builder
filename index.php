@@ -23,6 +23,7 @@
 				<ul class="house-nav-list">
 					<li class="house-nav-step house-nav-step--active" data-step="1">1</li>
 					<li class="house-nav-step" data-step="2">2</li>
+					<li class="house-nav-step" data-step="3">3</li>
 				</ul>
 			</nav>
 			<div class="house-elements">
@@ -36,6 +37,21 @@
 					<!--  -->
 				</div>
 				<div class="house-element house-element-2" data-step="2">
+					<div class="house-element-title">Rozmiar</div>
+					<!--  -->
+					<div class="house-element-size">
+						<label>
+							<div>Szerokość</div>
+							<input type="number" class="house-size-width" value="432">
+						</label>
+						<label>
+							<div>Wysokość</div>
+							<input type="number" class="house-size-height" value="432">
+						</label>
+					</div>
+					<!--  -->
+				</div>
+				<div class="house-element house-element-2" data-step="3">
 					<div class="house-element-title">Okna, drzwi, ściany</div>
 					<!--  -->
 					<div class="house-element-btn" data-element="window">

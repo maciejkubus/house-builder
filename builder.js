@@ -2,6 +2,32 @@
 	const houseCreator = document.querySelector('.house-creator')
 	const elementButtons = document.querySelectorAll('.house-element-btn')
 
+	const houseWidthInput = document.querySelector('.house-size-width')
+	const houseHeightInput = document.querySelector('.house-size-height')
+
+	let isBaseCreated = false;
+
+	const baseSquare = {
+		images: [
+			{ name: 'r', url: '/img/base-r.png' },
+			{ name: 'l', url: '/img/base-l.png' },
+			{ name: 't', url: '/img/base-t.png' },
+			{ name: 'b', url: '/img/base-b.png' },
+			{ name: 'rb', url: '/img/base-rb.png' },
+			{ name: 'lb', url: '/img/base-lb.png' },
+			{ name: 'lt', url: '/img/base-lt.png' },
+			{ name: 'rt', url: '/img/base-rt.png' },
+		],
+		size: {
+			t: 400,
+			r: 400,
+			b: 400,
+			l: 400,
+			width: 432,
+			height: 432,
+		}
+	};
+
 	elementButtons.forEach(elementButton => {
 		elementButton.addEventListener('click', () => elementButtonClick(elementButton))
 	})
@@ -19,9 +45,7 @@
 				roatatedImage: '/img/window-rotated.png'
 			});
 		} if(element == 'base') {
-			createItem({
-				image: '/img/base.png'
-			});
+			createBaseSquare();
 		}
 	}
 
@@ -105,4 +129,70 @@
 
 	}
 
+	const squareSetSize = (square) => {
+		const left = square.querySelector('.house-inner-l');
+		const right = square.querySelector('.house-inner-r');
+		const top = square.querySelector('.house-inner-t');
+		const bottom = square.querySelector('.house-inner-b');
+		const inner = square.querySelector('.house-base-inner');
+
+		left.style.height = baseSquare.size.l + 'px'
+		right.style.height = baseSquare.size.r + 'px'
+		top.style.width = baseSquare.size.t + 'px'
+		bottom.style.width = baseSquare.size.b + 'px'
+
+		inner.style.width = baseSquare.size.width + 'px';
+		inner.style.height = baseSquare.size.height + 'px';
+	}
+
+	const createBaseSquare = () => {
+		if(isBaseCreated) {
+			const houseBase = document.querySelector('.house-base');
+			houseBase.remove();
+		}
+
+		const houseCreatorRect = houseCreator.getBoundingClientRect()
+		const newItem = document.createElement("div")
+		newItem.classList.add('house-base');
+		const key = Date.now()
+		newItem.setAttribute('data-key', key)
+
+		const innerItem = document.createElement('div')
+		innerItem.classList.add('house-base-inner')
+
+		baseSquare.images.forEach(image => {
+			const div = document.createElement('div');
+			div.classList.add('house-inner-' + image.name)
+			div.style.backgroundImage = 'url("' + image.url + '")'
+			innerItem.appendChild(div);
+		})
+
+		newItem.appendChild(innerItem)
+		houseCreator.appendChild(newItem)
+		squareSetSize(newItem)
+		
+		// calculate place to put element into center (center of creator - half of new element +'px')
+		newItem.style.top = (houseCreatorRect.height / 2) - (baseSquare.size.height / 2) + 'px';
+		newItem.style.left = (houseCreatorRect.width / 2) - (baseSquare.size.width / 2) + 'px';
+
+		isBaseCreated = true;
+	}
+
+	const baseSizeChange = () => {
+		const width = houseWidthInput.value;
+		const height = houseHeightInput.value;
+
+		baseSquare.size.height = height;
+		baseSquare.size.width = width;
+
+		baseSquare.size.l = height - 32;
+		baseSquare.size.r = height - 32;
+		baseSquare.size.t = width - 32;
+		baseSquare.size.b = width - 32;
+
+		createBaseSquare();
+	}
+
+	houseWidthInput.addEventListener('change', baseSizeChange)
+	houseHeightInput.addEventListener('change', baseSizeChange)
 })()
