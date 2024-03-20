@@ -91,6 +91,8 @@
 	overflow: hidden;
 	cursor: pointer;
 	transition: .2s all ease-in-out;
+	text-align: center;
+	margin-bottom: 16px;
 }
 
 .house-element-btn:hover {
@@ -99,7 +101,7 @@
 }
 
 .house-element-btn-img {
-	width: 100%;
+	max-width: 100%;
 	margin-bottom: 8px;
 }
 
@@ -119,11 +121,10 @@
 	position: relative;
 }
 
-.house-item-remove {
+.house-item-remove,
+.house-item-rotate {
 	position: absolute;
 	z-index: 99;
-	top: -8px;
-	left: calc(100% - 8px);
 	background-color: white;
 	width: 32px;
 	height: 32px;
@@ -138,10 +139,21 @@
 	box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
 }
 
+.house-item-remove {
+	top: -8px;
+	left: calc(100% - 8px);
+}
+
+.house-item-rotate {
+	top: 32px;
+	left: calc(100% - 8px);
+}
+
 .house-item:hover {
 	z-index: 99;
 }
 
-.house-item:hover .house-item-remove {
+.house-item:hover .house-item-remove,
+.house-item:hover .house-item-rotate {
 	display: flex;
 }

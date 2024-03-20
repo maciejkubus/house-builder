@@ -13,6 +13,15 @@
 			createItem({
 				image: '/img/square.png'
 			});
+		} else if(element == 'window') {
+			createItem({
+				image: '/img/window.png',
+				roatatedImage: '/img/window-rotated.png'
+			});
+		} if(element == 'base') {
+			createItem({
+				image: '/img/base.png'
+			});
 		}
 	}
 
@@ -27,8 +36,13 @@
 		innerItem.classList.add('house-item-inner')
 		
 		const image = document.createElement('img')
+		image.classList.add('house-item-image')
+		image.setAttribute('data-key', key)
 		image.setAttribute('alt', 'item')
 		image.setAttribute('src', item.image)
+		image.setAttribute('data-image', item.image);
+		image.setAttribute('data-rotated-image', item.roatatedImage)
+		image.setAttribute('data-rotated', false)
 		innerItem.appendChild(image)
 		
 		const remove = document.createElement('div')
@@ -37,6 +51,15 @@
 		remove.innerHTML = '<i class="fas fa-trash"></i>'
 		remove.addEventListener('click', removeItem)
 		innerItem.appendChild(remove)
+
+		if(item.roatatedImage) {
+				const rotate = document.createElement('div')
+				rotate.classList.add('house-item-rotate')
+				rotate.setAttribute('data-key', key)
+				rotate.innerHTML = '<i class="fas fa-undo" data-key="'+key+'"></i>'
+				rotate.addEventListener('click', rotateItem)
+				innerItem.appendChild(rotate)
+		}
 		
 		newItem.appendChild(innerItem)
 		houseCreator.appendChild(newItem)
@@ -51,6 +74,35 @@
 	const removeItem = (event) => {
 		const item = event.target.parentNode.parentNode;
 		item.remove();
+	}
+
+	const rotateItem = (event) => {
+		const key = event.target.getAttribute('data-key')
+		const images = document.querySelectorAll('.house-item-image')
+		let image = null;
+
+		images.forEach(img => {
+			const imgKey = img.getAttribute('data-key')
+			if(imgKey == key)
+				image = img;
+		})
+
+		if(!image) {
+			return
+		}
+
+		const dataImage = image.getAttribute('data-image')
+		const dataRotatedImage = image.getAttribute('data-rotated-image')
+		const dataRotated = image.getAttribute('data-rotated') == 'true'
+
+
+		if(dataRotated)
+			image.setAttribute('src', dataImage)
+		else
+			image.setAttribute('src', dataRotatedImage)
+
+		image.setAttribute('data-rotated', !dataRotated)
+
 	}
 
 })()

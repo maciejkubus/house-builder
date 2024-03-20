@@ -29,11 +29,19 @@
 				<div class="house-element house-element-1 house-element--active" data-step="1">
 					<div class="house-element-title">Kształt</div>
 					<!--  -->
+					<div class="house-element-btn" data-element="base">
+						<img src="/img/base.png" alt="base" class="house-element-btn-img">
+						<div class="house-element-btn-text">Dom kwadratowy</div>
+					</div>
 					<!--  -->
 				</div>
 				<div class="house-element house-element-2" data-step="2">
 					<div class="house-element-title">Okna, drzwi, ściany</div>
 					<!--  -->
+					<div class="house-element-btn" data-element="window">
+						<img src="/img/window.png" alt="window" class="house-element-btn-img">
+						<div class="house-element-btn-text">Okno</div>
+					</div>
 					<div class="house-element-btn" data-element="square">
 						<img src="/img/square.png" alt="square" class="house-element-btn-img">
 						<div class="house-element-btn-text">Kwadrat</div>
