@@ -44,7 +44,12 @@
 				image: '/img/window.png',
 				roatatedImage: '/img/window-rotated.png'
 			});
-		} if(element == 'base') {
+		} else if(element == 'door') {
+			createItem({
+				image: '/img/door.png',
+				roatatedImage: '/img/door-rotated.png'
+			});
+		} else if(element == 'base') {
 			createBaseSquare();
 		}
 	}

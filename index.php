@@ -58,7 +58,11 @@
 						<img src="/img/window.png" alt="window" class="house-element-btn-img">
 						<div class="house-element-btn-text">Okno</div>
 					</div>
-					<div class="house-element-btn" data-element="square">
+					<div class="house-element-btn" data-element="door">
+						<img src="/img/door.png" alt="door" class="house-element-btn-img">
+						<div class="house-element-btn-text">Drzwi</div>
+					</div>
+					<div class="house-element-btn" data-element="square" style="display: none;">
 						<img src="/img/square.png" alt="square" class="house-element-btn-img">
 						<div class="house-element-btn-text">Kwadrat</div>
 					</div>
