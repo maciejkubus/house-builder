@@ -234,4 +234,10 @@
 	padding: 4px 8px;
 	border-radius: 8px;
 	margin-bottom: 16px;
+	width: 128px;
+}
+
+.house-element-input {
+	display: flex;
+	gap: 4px;
 }

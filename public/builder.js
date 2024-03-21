@@ -184,8 +184,9 @@
 	}
 
 	const baseSizeChange = () => {
-		const width = houseWidthInput.value;
-		const height = houseHeightInput.value;
+		const scale = 0.864;
+		const width = houseWidthInput.value * scale;
+		const height = houseHeightInput.value * scale;
 
 		baseSquare.size.height = height;
 		baseSquare.size.width = width;

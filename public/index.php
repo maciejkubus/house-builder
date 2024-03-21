@@ -42,11 +42,17 @@
 					<div class="house-element-size">
 						<label>
 							<div>Szerokość</div>
-							<input type="number" class="house-size-width" value="432">
+							<div class="house-element-input">
+								<input type="number" class="house-size-width" value="500">
+								cm
+							</div>
 						</label>
 						<label>
 							<div>Wysokość</div>
-							<input type="number" class="house-size-height" value="432">
+							<div class="house-element-input">
+								<input type="number" class="house-size-height" value="500">
+								cm
+							</div>
 						</label>
 					</div>
 					<!--  -->
