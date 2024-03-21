@@ -1,0 +1,19 @@
+{
+  "name": "ikea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "builder.js",
+  "scripts": {
+    "dev": "nodemon ./main.js"
+  },
+	"type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "php-server": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
