@@ -6,6 +6,13 @@
 	display: flex;
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
+}
+
+@media (max-width: 900px) {
+	.house {
+		flex-direction: column-reverse;
+	}
 }
 
 .house-nav {
@@ -16,15 +23,39 @@
 	z-index: 3;
 }
 
+@media (max-width: 900px) {
+	.house-nav {
+		display: flex;
+		gap: 16px;
+		padding-bottom: 0;
+	}
+}
+
 .house-nav-title {
 	font-weight: bold;
 	margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+	.house-nav-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-left: 8px;
+	}
 }
 
 .house-nav-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+@media (max-width: 900px) {
+	.house-nav-list {
+		display: flex;
+		gap: 16px;
+	}
 }
 
 .house-nav-step {
@@ -60,6 +91,13 @@
 	z-index: 2;
 }
 
+@media (max-width: 900px) {
+	.house-elements {
+		width: 100%;
+		height: 228px;
+	}
+}
+
 .house-element {
 	width: 100%;
 	display: none;
@@ -67,6 +105,18 @@
 
 .house-element--active {
 	display: block;
+}
+
+.house-elements-buttons {
+
+}
+
+@media (max-width: 900px) {
+	.house-elements-buttons {
+		display: flex;
+		height: 200px;
+		gap: 16px;
+	}
 }
 
 .house-element-title {
@@ -94,6 +144,16 @@
 	transition: .2s all ease-in-out;
 	text-align: center;
 	margin-bottom: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media (max-width: 900px) {
+	.house-element-btn {
+		width: 100px;
+	}
 }
 
 .house-element-btn:hover {
@@ -106,10 +166,22 @@
 	margin-bottom: 8px;
 }
 
+@media (max-width: 900px) {
+	.house-element-btn-img {
+		height: 120px;
+	}
+}
+
 .house-element-btn-text {
 	text-align: center;
 	font-size: 18px;
 	margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+	.house-element-btn-text {
+		font-size: 14px;
+	}
 }
 
 .house-item {
