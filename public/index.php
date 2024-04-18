@@ -84,6 +84,7 @@
 			</div>
 		</div>
 		<script src="steps.js"></script>
+		<script src="get-width.js"></script>
 		<script src="dragable.js"></script>
 		<script src="builder.js"></script>
 	</body>

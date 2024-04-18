@@ -184,7 +184,7 @@
 	}
 
 	const baseSizeChange = () => {
-		const scale = 0.864;
+		const scale = getWidth() < 900 ? 0.333 : 0.864;
 		const width = houseWidthInput.value * scale;
 		const height = houseHeightInput.value * scale;
 
@@ -196,9 +196,12 @@
 		baseSquare.size.t = width - 32;
 		baseSquare.size.b = width - 32;
 
-		createBaseSquare();
+		if(isBaseCreated)
+			createBaseSquare();
 	}
 
 	houseWidthInput.addEventListener('change', baseSizeChange)
 	houseHeightInput.addEventListener('change', baseSizeChange)
+
+	baseSizeChange();
 })()
